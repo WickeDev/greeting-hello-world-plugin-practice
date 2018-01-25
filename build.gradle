@@ -6,6 +6,9 @@ buildscript {
         maven {
             url "file:${rootDir}/maven-repo"
         }
+        maven {
+            url 'https://github.com/wickedev/greeting-hello-world-plugin-practice/raw/master/maven-repo'
+        }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
