@@ -1,0 +1,3 @@
+rootProject.name = 'greeting-hello-world-plugin-practice'
+include 'plugin'
+

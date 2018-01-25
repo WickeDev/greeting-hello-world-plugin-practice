@@ -1,0 +1,15 @@
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'net.codesanctum.greeting'
+            artifactId project.name
+            version '0.1.0'
+            artifact source: file("${project.buildDir}/libs/${project.name}-${version}.jar")
+        }
+    }
+    repositories {
+        maven {
+            url "file:${rootDir}/maven-repo"
+        }
+    }
+}

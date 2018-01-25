@@ -1,0 +1,27 @@
+buildscript {
+    ext.kotlin_version = '1.2.21'
+
+    repositories {
+        jcenter()
+        maven {
+            url "file:${rootDir}/maven-repo"
+        }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "net.codesanctum.greeting:plugin:0.1.0"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(name: 'clean', group: 'build', type: Delete) {
+    //noinspection GroovyAssignabilityCheck
+    delete rootProject.buildDir
+}
+
+apply plugin: 'greeting'
